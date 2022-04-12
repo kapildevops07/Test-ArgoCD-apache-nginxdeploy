@@ -1,0 +1,7 @@
+backstage_image:
+  repository: nginx
+  tag: 'stable'
+backstage_port:
+  http: 80
+backstage_replica:
+  count: '2'

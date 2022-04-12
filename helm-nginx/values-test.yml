@@ -1,0 +1,3 @@
+backstage_replica:
+  count: '3'
+namespace: 'test'

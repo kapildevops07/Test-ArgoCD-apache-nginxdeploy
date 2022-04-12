@@ -1,0 +1,3 @@
+backstage_replica:
+  count: '1'
+namespace: 'dev'

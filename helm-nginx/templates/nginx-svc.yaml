@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ .Values.namespace }}
+  name: backstage
+  labels:
+    app: backstage
+spec:
+  type: LoadBalancer
+  ports:
+  - port: {{ .Values.backstage_port.http }}
+    targetPort: {{ .Values.backstage_port.http }}
+  selector:
+    app: backstage

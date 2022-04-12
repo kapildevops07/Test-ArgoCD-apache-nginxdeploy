@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: Demo-MultiApp
+  namespace: argocd
+spec:
+  project: Demo-Project
+  source:
+    repoURL: https://github.com/kapildevops07/Test-ArgoCD-apache-nginxdeploy.git
+    targetRevision: HEAD
+    path: .
+    helm:
+      valueFiles:
+        - ./helm-nginx/values.yaml
+        - ./helm-nginx/values-dev.yml
+        - ./helm-nginx/values-test.yml
+        - ./helm-apache/values.yaml
+        - ./helm-apache/values-dev.yml
+        - ./helm-apache/values-test.yml
+      releaseName: Demo
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default

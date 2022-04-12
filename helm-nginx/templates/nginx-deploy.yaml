@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: {{ .Values.namespace }}
+  name: backstage
+spec:
+  selector:
+    matchLabels:
+      app: backstage
+  replicas: {{ .Values.backstage_replica.count }}
+  template:
+    metadata:
+      labels:
+        app: backstage
+    spec:
+      containers:
+      - name: backstage
+        image: {{ .Values.backstage_image.repository }}:{{ .Values.backstage_image.tag }}
+        ports:
+          - containerPort: 80
