@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Demo-MultiApp
+  name: demo-multiapp
   namespace: argocd
 spec:
-  project: Demo-Project
+  project: demo-project
   source:
     repoURL: https://github.com/kapildevops07/Test-ArgoCD-apache-nginxdeploy.git
     targetRevision: HEAD
