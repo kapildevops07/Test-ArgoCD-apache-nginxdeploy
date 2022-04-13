@@ -11,7 +11,7 @@ spec:
     path: helm-apache
     helm:
       valueFiles:
-        - ./helm-apache/values-test.yml
+        - ./values-test.yml
       releaseName: test-apache
   destination:
     server: https://kubernetes.default.svc
