@@ -15,4 +15,4 @@ spec:
       releaseName: test-apache
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: test
