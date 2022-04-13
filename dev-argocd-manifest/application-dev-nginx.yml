@@ -11,7 +11,7 @@ spec:
     path: helm-nginx
     helm:
       valueFiles:
-        - ./helm-nginx/values-dev.yml
+        - helm-nginx/values-dev.yml
       releaseName: dev-nginx
   destination:
     server: https://kubernetes.default.svc
