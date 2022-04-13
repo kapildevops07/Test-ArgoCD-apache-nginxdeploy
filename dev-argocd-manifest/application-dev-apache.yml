@@ -7,11 +7,11 @@ spec:
   project: demo-project
   source:
     repoURL: https://github.com/kapildevops07/Test-ArgoCD-apache-nginxdeploy.git
-    targetRevision: HEAD
+    targetRevision: master
     path: helm-apache
     helm:
       valueFiles:
-        - helm-apache/values-dev.yml
+        - ./values-dev.yml
       releaseName: dev-apache
   destination:
     server: https://kubernetes.default.svc
