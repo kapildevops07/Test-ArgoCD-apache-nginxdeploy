@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/kapildevops07/Test-ArgoCD-apache-nginxdeploy.git
     targetRevision: master
-    path: .
+    path: helm-nginx
     helm:
       valueFiles:
         - ./helm-nginx/values-dev.yml
