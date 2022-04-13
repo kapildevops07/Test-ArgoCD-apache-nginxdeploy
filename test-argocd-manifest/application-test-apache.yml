@@ -4,7 +4,7 @@ metadata:
   name: demo-apache-test
   namespace: argocd
 spec:
-  project: demo-project
+  project: demo-project-test
   source:
     repoURL: https://github.com/kapildevops07/Test-ArgoCD-apache-nginxdeploy.git
     targetRevision: test
