@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - ./helm-apache/values-dev.yml
-      releaseName: Demo
+      releaseName: dev-apache
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
